@@ -98,7 +98,7 @@
   </nav>
 
   <style>
-    .nav-link:hover{
+    .dropdown-item:hover, .nav-link:hover{
       color: #ffc107 !important;
     }
   </style>
