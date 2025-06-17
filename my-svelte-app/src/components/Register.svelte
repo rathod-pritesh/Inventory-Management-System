@@ -10,7 +10,7 @@
         <div class="modal-content animate__animated animate__fadeInUp">
           <div class="modal-header">
             <h5 class="modal-title" id="registerModalLabel">
-              <i class="bi bi-person-plus form-title-icon"></i> Join Smartcity
+              <i class="bi bi-person-plus form-title-icon"></i> Join Invenza
             </h5>
             <button
               type="button"
@@ -22,7 +22,7 @@
           <div class="modal-body">
             <div class="text-center mb-4">
               <h4>Create Your Account</h4>
-              <p class="text-muted">Start managing your construction projects today</p>
+              <p class="text-muted">Start managing your Inventory today</p>
             </div>
             <form id="registerForm">
               <div class="mb-3">

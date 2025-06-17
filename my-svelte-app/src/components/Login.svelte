@@ -22,7 +22,7 @@
           <div class="modal-body">
             <div class="text-center mb-4">
               <h4>Login to Your Account</h4>
-              <p class="text-muted">Access your projects and continue building</p>
+              <p class="text-muted">Access your Inventory</p>
             </div>
             <form id="loginForm">
               <div class="mb-3">
