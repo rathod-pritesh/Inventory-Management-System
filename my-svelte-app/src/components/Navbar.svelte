@@ -1,32 +1,15 @@
 <script>
-  import { createEventDispatcher, onMount } from "svelte";
+  import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
-
-  // load Bootstrap JS after components mounts
-  onMount(() => {
-    import("bootstrap");
-  });
 </script>
 
-<nav
-  class="navbar navbar-expand-lg navbar-light bg-light border-bottom px-3 shadow-sm"
->
-  <div class="container-fluid">
-    <a class="navbar-brand text-warning ps-3 fw-bold" href="#home"
-      ><i class="fas fa-warehouse"></i> Invenza</a
-    >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand text-warning px-5 fs-2" href="invenza">Invenza</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-5">
         <li class="nav-item ps-2">
           <a
@@ -98,25 +81,24 @@
           <a class="nav-link text-dark" href="#reports">Reports</a>
         </li>
       </ul>
+
       <div class="ms-auto d-flex gap-2">
         <button
           on:click={() => dispatch('navigate', 'login')}
-          class="btn btn-outline-warning me-2"
+          class="btn btn-outline-warning m-2"
           >Login</button
         >
         <button
           on:click={() => dispatch('navigate', 'register')}
-          class="btn btn-warning"
+          class="btn btn-warning px-4 m-2"
           >Register</button
         >
       </div>
     </div>
-    
-  </div>
-</nav>
+  </nav>
 
-<style>
-  nav a.nav-link:hover{
-    color: #ffc107;
-  }
-</style>
+  <style>
+    .nav-link:hover{
+      color: #ffc107 !important;
+    }
+  </style>
