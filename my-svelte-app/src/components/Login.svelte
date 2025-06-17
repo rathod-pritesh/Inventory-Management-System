@@ -45,6 +45,7 @@
                     placeholder="Enter your password"
                     required
                   />
+                  <!-- svelte-ignore a11y_consider_explicit_label -->
                   <button
                     class="btn btn-outline-secondary toggle-password"
                     type="button"
@@ -58,15 +59,15 @@
                   <input class="form-check-input" type="checkbox" id="rememberMe">
                   <label class="form-check-label" for="rememberMe">Remember me</label>
                 </div>
-                <a href="#" class="text-decoration-none">Forgot Password?</a>
+                <a href="#forgotpassword" class="text-decoration-none">Forgot Password?</a>
               </div>
-              <button type="submit" class="btn btn-primary w-100">
+              <button type="submit" class="btn btn-warning w-100">
                 <i class="bi bi-box-arrow-in-right"></i> Login Now
               </button>
               <div class="text-center mt-3">
                 Don't have an account?
                 <a
-                  href="#"
+                  href="#register"
                   data-bs-toggle="modal"
                   data-bs-target="#registerModal"
                   data-bs-dismiss="modal"

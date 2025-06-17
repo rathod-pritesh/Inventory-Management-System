@@ -14,6 +14,12 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
-    "bootstrap": "^5.3.6"
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/svelte-fontawesome": "^0.2.3",
+    "bootstrap": "^5.3.6",
+    "svelte-fa": "^4.0.4"
   }
 }

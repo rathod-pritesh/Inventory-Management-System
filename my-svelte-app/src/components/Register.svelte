@@ -55,6 +55,7 @@
                     placeholder="Create a password"
                     required
                   />
+                  <!-- svelte-ignore a11y_consider_explicit_label -->
                   <button
                     class="btn btn-outline-secondary toggle-password"
                     type="button"
@@ -79,16 +80,16 @@
               <div class="form-check mb-3">
                 <input class="form-check-input" type="checkbox" id="termsCheck" required>
                 <label class="form-check-label" for="termsCheck">
-                  I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                  I agree to the <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a>
                 </label>
               </div>
-              <button type="submit" class="btn btn-primary w-100">
+              <button type="submit" class="btn btn-warning w-100">
                 <i class="bi bi-envelope-check"></i> Verify Email
               </button>
               <div class="text-center mt-3">
                 Already have an account?
                 <a
-                  href="#"
+                  href="#login"
                   data-bs-toggle="modal"
                   data-bs-target="#loginModal"
                   data-bs-dismiss="modal"
