@@ -10,7 +10,7 @@
         <div class="modal-content animate__animated animate__fadeInUp">
           <div class="modal-header">
             <h5 class="modal-title" id="registerModalLabel">
-              <i class="bi bi-person-plus form-title-icon"></i> Join Invenza
+              <i class="fas fa-user-plus form-title-icon"></i> Join Invenza
             </h5>
             <button
               type="button"
@@ -26,7 +26,7 @@
             </div>
             <form id="registerForm">
               <div class="mb-3">
-                <label for="username" class="form-label"><i class="bi bi-person"></i> Username</label>
+                <label for="username" class="form-label"><i class="fas fa-user"></i> Username</label>
                 <input
                   type="text"
                   class="form-control"
@@ -36,7 +36,7 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label"><i class="bi bi-envelope"></i> Email</label>
+                <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
                 <input
                   type="email"
                   class="form-control"
@@ -46,7 +46,7 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="password" class="form-label"><i class="bi bi-lock"></i> Password</label>
+                <label for="password" class="form-label"><i class="fas fa-lock"></i>  Password</label>
                 <div class="input-group">
                   <input
                     type="password"
@@ -60,7 +60,7 @@
                     class="btn btn-outline-secondary toggle-password"
                     type="button"
                   >
-                    <i class="bi bi-eye"></i>
+                    <i class="fas fa-eye"></i>  
                   </button>
                 </div>
                 <small class="text-muted">
@@ -68,7 +68,7 @@
                 </small>
               </div>
               <div class="mb-3">
-                <label for="confirmPassword" class="form-label"><i class="bi bi-shield-lock"></i> Confirm Password</label>
+                <label for="confirmPassword" class="form-label"><i class="fas fa-shield-alt"></i> Confirm Password</label>
                 <input
                   type="password"
                   class="form-control"
@@ -84,7 +84,7 @@
                 </label>
               </div>
               <button type="submit" class="btn btn-warning w-100">
-                <i class="bi bi-envelope-check"></i> Verify Email
+                <i class="fas fa-envelope-check"></i> Verify Email
               </button>
               <div class="text-center mt-3">
                 Already have an account?

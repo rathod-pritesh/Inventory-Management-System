@@ -10,7 +10,7 @@
         <div class="modal-content animate__animated animate__fadeInUp">
           <div class="modal-header">
             <h5 class="modal-title" id="loginModalLabel">
-              <i class="bi bi-person-check form-title-icon"></i> Welcome Back
+              <i class="fas fa-user-plus form-title-icon"></i> Welcome Back
             </h5>
             <button
               type="button"
@@ -26,7 +26,7 @@
             </div>
             <form id="loginForm">
               <div class="mb-3">
-                <label for="loginEmail" class="form-label"><i class="bi bi-envelope"></i> Email</label>
+                <label for="loginEmail" class="form-label"><i class="fas fa-envelope"></i> Email</label>
                 <input
                   type="email"
                   class="form-control"
@@ -36,7 +36,7 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="loginPassword" class="form-label"><i class="bi bi-lock"></i> Password</label>
+                <label for="loginPassword" class="form-label"><i class="fas fa-lock"></i> Password</label>
                 <div class="input-group">
                   <input
                     type="password"
@@ -50,7 +50,7 @@
                     class="btn btn-outline-secondary toggle-password"
                     type="button"
                   >
-                    <i class="bi bi-eye"></i>
+                    <i class="fas fa-eye"></i>
                   </button>
                 </div>
               </div>
@@ -62,7 +62,7 @@
                 <a href="#forgotpassword" class="text-decoration-none">Forgot Password?</a>
               </div>
               <button type="submit" class="btn btn-warning w-100">
-                <i class="bi bi-box-arrow-in-right"></i> Login Now
+                <i class="fas fa-box-arrow-in-right"></i>  Login Now
               </button>
               <div class="text-center mt-3">
                 Don't have an account?
