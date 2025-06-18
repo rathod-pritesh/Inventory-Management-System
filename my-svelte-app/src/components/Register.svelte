@@ -10,7 +10,7 @@
         <div class="modal-content animate__animated animate__fadeInUp">
           <div class="modal-header">
             <h5 class="modal-title" id="registerModalLabel">
-              <i class="fas fa-user-plus form-title-icon"></i> Join Invenza
+              <i class="fas fa-user-plus form-title-icon"></i> Join <span class="text-primary">Invenza</span> 
             </h5>
             <button
               type="button"

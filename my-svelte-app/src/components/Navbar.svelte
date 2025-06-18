@@ -1,17 +1,19 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-  const dispatch = createEventDispatcher();
-  import Login from './Login.svelte';
-  import Register from './Register.svelte';
+  
+  import Login from "./Login.svelte";
+  import Register from "./Register.svelte";
+  
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand text-warning px-5 fs-2" href="invenza"><i class="fas fa-warehouse me-2"></i>Invenza</a>
+  <a class="navbar-brand text-warning px-5 fs-2" href="invenza"
+    ><i class="fas fa-warehouse me-2"></i>Invenza</a
+  >
   <button
     class="navbar-toggler"
     type="button"
-    data-toggle="collapse"
-    data-target="#navbarNavDropdown"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNavDropdown"
     aria-controls="navbarNavDropdown"
     aria-expanded="false"
     aria-label="Toggle navigation"
@@ -27,7 +29,9 @@
         >
       </li>
       <li class="nav-item ps-2">
-        <a class="nav-link text-dark" href="#products"><i class="fas fa-boxes me-1"></i>Products</a>
+        <a class="nav-link text-dark" href="#products"
+          ><i class="fas fa-boxes me-1"></i>Products</a
+        >
       </li>
       <li class="nav-item dropdown ps-2">
         <a
@@ -35,7 +39,8 @@
           href="#inventory"
           role="button"
           data-bs-toggle="dropdown"
-          aria-expanded="false"><i class="fas fa-clipboard-list me-1"></i>Inventory</a
+          aria-expanded="false"
+          ><i class="fas fa-clipboard-list me-1"></i>Inventory</a
         >
         <ul class="dropdown-menu">
           <li>
@@ -44,15 +49,21 @@
             >
           </li>
           <li>
-            <a href="#stockin" class="dropdown-item text-dark"><i class="fas fa-arrow-down me-2"></i>Stock In</a>
+            <a href="#stockin" class="dropdown-item text-dark"
+              ><i class="fas fa-arrow-down me-2"></i>Stock In</a
+            >
           </li>
           <li>
-            <a href="#stockout" class="dropdown-item text-dark"><i class="fas fa-arrow-up me-2"></i>Stock Out</a>
+            <a href="#stockout" class="dropdown-item text-dark"
+              ><i class="fas fa-arrow-up me-2"></i>Stock Out</a
+            >
           </li>
         </ul>
       </li>
       <li class="nav-item ps-2">
-        <a class="nav-link text-dark" href="#booknow"><i class="fas fa-shopping-cart me-1"></i>Orders</a>
+        <a class="nav-link text-dark" href="#orders"
+          ><i class="fas fa-shopping-cart me-1"></i>Orders</a
+        >
       </li>
       <li class="nav-item dropdown ps-2">
         <a
@@ -81,10 +92,14 @@
         </ul>
       </li>
       <li class="nav-item ps-2">
-        <a class="nav-link text-dark" href="#customers"><i class="fas fa-users me-1"></i>Customers</a>
+        <a class="nav-link text-dark" href="#customers"
+          ><i class="fas fa-users me-1"></i>Customers</a
+        >
       </li>
       <li class="nav-item ps-2">
-        <a class="nav-link text-dark" href="#reports"><i class="fas fa-chart-line me-1"></i>Reports</a>
+        <a class="nav-link text-dark" href="#reports"
+          ><i class="fas fa-chart-line me-1"></i>Reports</a
+        >
       </li>
     </ul>
 
@@ -94,7 +109,7 @@
         class="btn btn-outline-warning m-2"
         data-bs-toggle="modal"
         data-bs-target="#loginModal"
-      ><i class="fas fa-sign-in-alt me-1"></i>
+        ><i class="fas fa-sign-in-alt me-1"></i>
         Login
       </button>
 
@@ -103,7 +118,7 @@
         class="btn btn-warning m-2"
         data-bs-toggle="modal"
         data-bs-target="#registerModal"
-      ><i class="fas fa-user-plus me-1"></i>
+        ><i class="fas fa-user-plus me-1"></i>
         Register
       </button>
     </div>
@@ -111,6 +126,7 @@
 </nav>
 <Login />
 <Register />
+
 <style>
   .dropdown-item:hover,
   .nav-link:hover {
@@ -118,10 +134,9 @@
   }
 
   .me-1 {
-  margin-right: 0.25rem;
-}
-.me-2 {
-  margin-right: 0.5rem;
-}
-
+    margin-right: 0.25rem;
+  }
+  .me-2 {
+    margin-right: 0.5rem;
+  }
 </style>

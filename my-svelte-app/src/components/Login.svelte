@@ -10,7 +10,7 @@
         <div class="modal-content animate__animated animate__fadeInUp">
           <div class="modal-header">
             <h5 class="modal-title" id="loginModalLabel">
-              <i class="fas fa-user-plus form-title-icon"></i> Welcome Back
+              <i class="fas fa-user-plus form-title-icon"></i> <span class="text-primary">Welcome Back</span> 
             </h5>
             <button
               type="button"
