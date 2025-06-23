@@ -1,13 +1,57 @@
 <script>
-  
   import Login from "./Login.svelte";
   import Register from "./Register.svelte";
-  
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link, .dropdown-item");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+
+            //Update URL without reloading
+            history.replaceState(null, "", `#${id}`);
+
+            //Remove active from all
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+            });
+
+            //Add active to the matching nav or dropdown link
+            navLinks.forEach((link) => {
+              if(link.getAttribute("href") === `#${id}`){
+                link.classList.add("active");
+                // If it's a dropdown item, make sure parent nav-link also looks active
+                const parent = link.closest(".dropdown-menu");
+                if(parent){
+                  const toggle = parent.previousElementSibling;
+                  if (toggle && toggle.classList.contains("nav-link")) {
+                    toggle.classList.add("active");
+                  }
+                }
+              }
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.6, // 60% visisble = active
+      },
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
 </script>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand px-5 fs-2" style="color:#f8f9fa;" href="invenza"
-    ><i class="fas fa-warehouse me-2"></i>Invenza</a
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand px-5 fs-2" style="color:#f8f9fa;" href="home"
+    >Invenza</a
   >
   <button
     class="navbar-toggler"
@@ -44,17 +88,17 @@
         >
         <ul class="dropdown-menu">
           <li>
-            <a href="#currentstock" class="dropdown-item text-dark"
+            <a href="#currentstock" class="dropdown-item"
               ><i class="fas fa-box-open me-2"></i>Current Stock</a
             >
           </li>
           <li>
-            <a href="#stockin" class="dropdown-item text-dark"
+            <a href="#stockin" class="dropdown-item"
               ><i class="fas fa-arrow-down me-2"></i>Stock In</a
             >
           </li>
           <li>
-            <a href="#stockout" class="dropdown-item text-dark"
+            <a href="#stockout" class="dropdown-item"
               ><i class="fas fa-arrow-up me-2"></i>Stock Out</a
             >
           </li>
@@ -75,17 +119,17 @@
         >
         <ul class="dropdown-menu">
           <li>
-            <a href="#supplierlist" class="dropdown-item text-dark"
+            <a href="#supplierlist" class="dropdown-item"
               ><i class="fas fa-list me-2"></i>Supplier List</a
             >
           </li>
           <li>
-            <a href="#addsupplier" class="dropdown-item text-dark"
+            <a href="#addsupplier" class="dropdown-item"
               ><i class="fas fa-plus-circle me-2"></i>Add Supplier</a
             >
           </li>
           <li>
-            <a href="#purchaseorders" class="dropdown-item text-dark"
+            <a href="#purchaseorders" class="dropdown-item"
               ><i class="fas fa-file-invoice me-2"></i>Purchase Orders</a
             >
           </li>
@@ -106,7 +150,7 @@
     <div class="ms-auto d-flex gap-2">
       <!-- Login Button -->
       <button
-        class="btn btn-outline-warning px-4 py-2 m-2 fw-semibold"
+        class="btn btn-outline-light px-4 py-2 m-2 fw-semibold"
         data-bs-toggle="modal"
         data-bs-target="#loginModal"
         ><i class="fas fa-sign-in-alt me-1"></i>
@@ -129,13 +173,17 @@
 
 <style>
   .navbar-dark .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.6); /* Optional border */
-}
-  .navbar-brand:hover,.dropdown-item:hover,
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .navbar-brand:hover,
   .nav-link:hover {
-    color: #ffc107 !important;
+    color: #b0c4de !important;
   }
 
+  .dropdown-item:hover {
+    color: #f0f0f0;
+    background-color: #101010;
+  }
   .me-1 {
     margin-right: 0.25rem;
   }
@@ -144,12 +192,12 @@
   }
 
   .btn {
-  font-family: 'Poppins', sans-serif;
-  border-radius: 0.4rem;
-}
+    font-family: "Poppins", sans-serif;
+    border-radius: 0.4rem;
+  }
 
-.btn i {
-  font-size: 0.9rem;
-}
+  .btn i {
+    font-size: 0.9rem;
+  }
 
 </style>

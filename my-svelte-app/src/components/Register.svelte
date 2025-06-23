@@ -1,3 +1,19 @@
+<script>
+  document.addEventListener("click", (event) => {
+    // @ts-ignore
+    const button = event.target.closest(".toggle-password");
+    if (button) {
+      const input = button.previousElementSibling;
+      if (input && input instanceof HTMLInputElement) {
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        const icon = isPassword ? "eye-slash" : "eye";
+        button.innerHTML = `<i class="fas fa-${icon}"></i>`;
+      }
+    }
+  });
+</script>
+
 <!-- Register Modal -->
     <div
       class="modal fade"
@@ -7,14 +23,14 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content animate__animated animate__fadeInUp">
+        <div class="modal-content animate__animated animate__fadeInUp bg-light text-dark">
           <div class="modal-header">
             <h5 class="modal-title" id="registerModalLabel">
-              <i class="fas fa-user-plus form-title-icon"></i> Join <span class="text-primary">Invenza</span> 
+              <i class="fas fa-user-plus form-title-icon"></i> Join Invenza 
             </h5>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-dark"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
@@ -29,7 +45,7 @@
                 <label for="username" class="form-label"><i class="fas fa-user"></i> Username</label>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control border-primary"
                   id="username"
                   placeholder="Choose a username"
                   required
@@ -39,7 +55,7 @@
                 <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-control border-primary"
                   id="email"
                   placeholder="Enter your email"
                   required
@@ -50,7 +66,7 @@
                 <div class="input-group">
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control border-primary"
                     id="password"
                     placeholder="Create a password"
                     required
@@ -71,7 +87,7 @@
                 <label for="confirmPassword" class="form-label"><i class="fas fa-shield-alt"></i> Confirm Password</label>
                 <input
                   type="password"
-                  class="form-control"
+                  class="form-control border-primary"
                   id="confirmPassword"
                   placeholder="Confirm your password"
                   required
@@ -83,7 +99,7 @@
                   I agree to the <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a>
                 </label>
               </div>
-              <button type="submit" class="btn btn-warning w-100">
+              <button type="submit" class="btn btn-primary w-100">
                 <i class="fas fa-envelope-check"></i> Verify Email
               </button>
               <div class="text-center mt-3">

@@ -2,6 +2,13 @@
   import Navbar from "./components/Navbar.svelte";
   import Home from "./components/Home.svelte";
   import Footer from "./components/Footer.svelte";
+  import Products from "./components/Products.svelte";
+  import CurrentStock from "./components/CurrentStock.svelte";
+  import StockIn from "./components/StockIn.svelte";
+  import StockOut from "./components/StockOut.svelte";
+  import AddSupplier from "./components/AddSupplier.svelte";
+  import SupplierList from "./components/SupplierList.svelte";
+  import PurchaseOrders from "./components/PurchaseOrders.svelte";
   import { slide } from "svelte/transition";
 
   let currentForm = '';
@@ -21,24 +28,16 @@
 
 <main>
   <Home />
+  <Products />
+  <CurrentStock />
+  <StockIn />
+  <StockOut />
+  <SupplierList />
+  <AddSupplier />
+  <PurchaseOrders />
 </main>
 <Footer />
 
 <style>
-  :global(::-webkit-scrollbar) {
-    width: 10px;
-  }
-
-  :global(::-webkit-scrollbar-track) {
-    background: #fff;
-  }
-
-  :global(::-webkit-scrollbar-thumb) {
-    background: linear-gradient(to bottom, #ffc107, #ffb300, #ffa000);
-    border-radius: 10px;
-  }
-
-  :global(::-webkit-scrollbar-thumb:hover) {
-    background: linear-gradient(to bottom, #ffa000, #ffb300, #ffc107);
-  }
+ 
 </style>

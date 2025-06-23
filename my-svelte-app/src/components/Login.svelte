@@ -1,3 +1,19 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () =>{
+    document.querySelectorAll(".toggle-password").forEach(button =>{
+      button.addEventListener("click", () =>{
+        const input = button.previousElementSibling;
+        
+        if(input && input instanceof HTMLInputElement){
+          const isPassword = input.type === "password";
+          input.type = isPassword ? "text" : "password";
+          const icon = isPassword ? "eye-slash" : "eye";
+          button.innerHTML = `<i class="fas fa-${icon}"></i>`;
+        }
+      });
+    });
+  });
+</script>
 <!-- Login Modal -->
     <div
       class="modal fade"
@@ -7,18 +23,19 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content animate__animated animate__fadeInUp">
+        <div class="modal-content animate__animated bg-light text-dark animate__fadeInUp">
           <div class="modal-header">
             <h5 class="modal-title" id="loginModalLabel">
-              <i class="fas fa-user-plus form-title-icon"></i> <span class="text-primary">Welcome Back</span> 
+              <i class="fas fa-user-plus form-title-icon"></i> <span class="text-dark">Welcome Back</span> 
             </h5>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-dark"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
+          
           <div class="modal-body">
             <div class="text-center mb-4">
               <h4>Login to Your Account</h4>
@@ -29,7 +46,7 @@
                 <label for="loginEmail" class="form-label"><i class="fas fa-envelope"></i> Email</label>
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-control border-primary"
                   id="loginEmail"
                   placeholder="Enter your email"
                   required
@@ -40,7 +57,7 @@
                 <div class="input-group">
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control border-primary"
                     id="loginPassword"
                     placeholder="Enter your password"
                     required
@@ -61,7 +78,7 @@
                 </div>
                 <a href="#forgotpassword" class="text-decoration-none">Forgot Password?</a>
               </div>
-              <button type="submit" class="btn btn-warning w-100">
+              <button type="submit" class="btn btn-primary w-100">
                 <i class="fas fa-box-arrow-in-right"></i>  Login Now
               </button>
               <div class="text-center mt-3">
@@ -79,3 +96,4 @@
         </div>
       </div>
     </div>
+
